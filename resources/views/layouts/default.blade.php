@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title', 'default') - learn laravel5.5</title>
-	<link rel="stylesheet" href="/css/app.css">
+    <title>@yield('title', 'Sample App') - Laravel 入门教程</title>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body>
-	@include('shared._messages')
-	@include('layouts._header')
+    @include('layouts._header')
+
     <div class="container">
-      @yield('content')
-	  @include('layouts._footer')
+      <div class="col-md-offset-1 col-md-10">
+        @include('shared._messages')
+        @yield('content')
+        @include('layouts._footer')
+      </div>
     </div>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>
